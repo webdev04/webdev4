@@ -1,0 +1,150 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+/*video{
+    width: 30%;
+    padding-left:35%;
+    padding-right:auto;
+    position:absolute;
+    bottom:0;
+    border-radius: 10px;
+}*/
+
+
+
+
+
+video{
+  width: 100vw;
+  height: 100vh;
+  object-fit:fill;
+  position: fixed;
+  bottom:0;
+  right: 0;
+  z-index: -1;
+}
+
+.glow {
+    padding-top:7%;
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #7619a1, 0 0 40px #7619a1, 0 0 50px #7619a1, 0 0 60px #7619a1, 0 0 70px #7619a1;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ae00ff, 0 0 40px #ae00ff, 0 0 50px #ae00ff, 0 0 60px #ae00ff, 0 0 70px #ae00ff, 0 0 80px #ae00ff;
+    }
+  }
+
+  /*---------overlay*/
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }
+  /*-------button-------*/
+ 
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    font-family:'Work Sans';
+    transition:all 0.6s;
+    animation:glowing 2s infinite;
+}
+@keyframes glowing {
+0% {
+  background-color: #2ba805;
+  box-shadow: 0 0 5px #2ba805;
+}
+50% {
+  background-color: #49e819;
+  box-shadow: 0 0 20px #49e819;
+}
+100% {
+  background-color: #2ba805;
+  box-shadow: 0 0 5px #2ba805;
+}
+}
+.btn:hover{
+    animation: none;
+    border: 3px solid limegreen;
+    background-color:orangered;
+    transform:scale(1.5);
+}
+  
+/*flexbox*/
+.flex-item {
+  display:flex;
+  align-items: center;
+}
+
+.flex-item img{
+  height:100vh;
+  flex-grow:0;
+  flex-shrink:0;
+  margin-right:20px;
+}
+.flex-item div{
+  margin-right:20px;
+}
+.flex-item p{
+  font-family:garamond;
+  font-size:25px;
+}
